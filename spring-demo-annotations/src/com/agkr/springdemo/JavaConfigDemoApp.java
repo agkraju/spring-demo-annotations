@@ -1,14 +1,14 @@
 package com.agkr.springdemo;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class AnnotationDemoApp {
+public class JavaConfigDemoApp {
 
 	public static void main(String[] args) {
 		
 		// Read spring config file
-		ClassPathXmlApplicationContext context = 
-				new ClassPathXmlApplicationContext("applicationContext.xml");
+		AnnotationConfigApplicationContext context = 
+				new AnnotationConfigApplicationContext(SportConfig.class);
 		
 		// Get the bean from spring container
 		Coach coach = context.getBean("tennisCoach", Coach.class);
