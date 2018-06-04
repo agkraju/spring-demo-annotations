@@ -10,8 +10,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component("tennisCoach")
-@Component
+
 //@Scope("prototype")
+@Component
 public class TennisCoach implements Coach {
 
 	//@Autowired

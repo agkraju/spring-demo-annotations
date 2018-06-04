@@ -11,7 +11,7 @@ public class JavaConfigDemoApp {
 				new AnnotationConfigApplicationContext(SportConfig.class);
 		
 		// Get the bean from spring container
-		Coach coach = context.getBean("tennisCoach", Coach.class);
+		SwimCoach coach = context.getBean("swimCoach", SwimCoach.class);
 		
 		//TennisCoach tCoach = (TennisCoach) coach;
 		
@@ -19,7 +19,10 @@ public class JavaConfigDemoApp {
 		System.out.println(coach.getDailyWorkout());
 		
 		System.out.println(coach.getDailyFortune());
-		//System.out.println(tCoach.getN());
+		
+		System.out.println(coach.getName());
+		
+		System.out.println(coach.getAge());
 		
 		// Close context  
 		
